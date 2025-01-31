@@ -1,0 +1,12 @@
+[Unit]
+Description=Nginx Upstream Control Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/stash/nginx_upstream_service.py
+WorkingDirectory=/home/stash/
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
